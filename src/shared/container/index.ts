@@ -5,6 +5,8 @@ import { UsersRepository } from '../../modules/users/repositories/UsersRepositor
 
 import { IStatementsRepository } from '../../modules/statements/repositories/IStatementsRepository';
 import { StatementsRepository } from '../../modules/statements/repositories/StatementsRepository';
+import { ITransfer } from '../../modules/tranfers/repositories/ITranfer';
+import { TransferRepository } from '../../modules/tranfers/repositories/TranferRepository';
 
 container.registerSingleton<IUsersRepository>(
   'UsersRepository',
@@ -15,3 +17,8 @@ container.registerSingleton<IStatementsRepository>(
   'StatementsRepository',
   StatementsRepository
 );
+
+container.registerSingleton<ITransfer>(
+  'TransferRepository',
+  TransferRepository
+)
